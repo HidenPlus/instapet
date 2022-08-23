@@ -17,7 +17,7 @@ query getSinglePhoto($id: ID!) {
 `
 
 export const PhotoCardWithQuery = () => {
-  let params = useParams();
+  const params = useParams()
   const { data, loading, error } = useQuery(PHOTO_QUERY, { variables: { id: params.id } })
   console.log(data)
   if (loading) {
